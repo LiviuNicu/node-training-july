@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const crypto = require("crypto");
+const JWT = require("../middlewares/jwt");
 
 function hashPw(pwd) {
   return crypto.createHash("sha256").update(pwd).digest("base64").toString();
@@ -63,7 +64,8 @@ module.exports.login = function (userRequestFields) {
         reject({ message: "User not found" });
       } else {
         if (user.hashed_password === hashPw(userRequestFields.password)) {
-          resolve({ user: user });
+          const token = JWT.generateToken({ email: user.email, _id: user._id });
+          resolve({ user: user, token: token });
         } else {
           reject({ message: "Wrong password" });
         }
