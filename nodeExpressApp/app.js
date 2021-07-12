@@ -4,6 +4,7 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
@@ -19,6 +20,18 @@ mongoose.connect(
 );
 var app = express();
 
+const corsOptions = {
+  origin: "*",
+  allowedHeaders: [
+    "Content-type",
+    "Authorization",
+    "Content-length",
+    "X-Requested-Width",
+    "Accept",
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+};
+app.use(cors(corsOptions));
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");

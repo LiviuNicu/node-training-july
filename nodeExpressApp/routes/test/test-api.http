@@ -15,3 +15,14 @@ Content-Type: application/json
     "email":"liviu@email.com",
     "password":"password123"
 }
+
+
+###
+GET http://localhost:3000/api/users
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxpdml1QGVtYWlsLmNvbSIsIl9pZCI6IjYwZWMyMmUzMDg2MTYxNzEwYzdjMjVjMyIsImlhdCI6MTYyNjA5MTAwNSwiZXhwIjoxNjI2MTc3NDA1fQ.yTRsEJv9XEUb0gueBXmfb4qRW9sMwBmvUhzUNK80h3U
+
+###
+GET http://localhost:3000/api/user/60ec061a7feaf73950178d34
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxpdml1QGVtYWlsLmNvbSIsIl9pZCI6IjYwZWMyMmUzMDg2MTYxNzEwYzdjMjVjMyIsImlhdCI6MTYyNjA5MTAwNSwiZXhwIjoxNjI2MTc3NDA1fQ.yTRsEJv9XEUb0gueBXmfb4qRW9sMwBmvUhzUNK80h3U
