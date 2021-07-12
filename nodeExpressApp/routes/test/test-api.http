@@ -1,0 +1,9 @@
+POST http://localhost:3000/api/auth/register/1312321
+Content-Type: application/json
+
+{
+    "firstName":"TEST123",
+    "lastName":"TEST123",
+    "email":"test123@emai.com",
+    "password":"password123"
+}
