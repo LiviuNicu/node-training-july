@@ -73,3 +73,27 @@ module.exports.login = function (userRequestFields) {
     });
   });
 };
+
+module.exports.getAllUsers = function () {
+  return new Promise(function (resolve, reject) {
+    user.find().exec(function (err, users) {
+      if (err) {
+        reject({ err: err });
+      } else {
+        resolve({ users: users });
+      }
+    });
+  });
+};
+
+module.exports.getUserById = function (id) {
+  return new Promise(function (resolve, reject) {
+    user.findOne({ _id: id }).exec(function (err, user) {
+      if (err) {
+        reject({ err: err });
+      } else {
+        resolve({ user: user });
+      }
+    });
+  });
+};

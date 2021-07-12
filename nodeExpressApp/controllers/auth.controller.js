@@ -31,3 +31,21 @@ module.exports.loginAPI = async function (req, res) {
     res.status(500).json(err);
   }
 };
+
+module.exports.getAllUsersAPI = async function (req, res) {
+  try {
+    const response = await userModel.getAllUsers();
+    res.status(200).json(response);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+};
+
+module.exports.getUserByIdAPI = async function (req, res) {
+  try {
+    const response = await userModel.getUserById(req.params.id);
+    res.status(200).json(response);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+};
