@@ -97,3 +97,5 @@ module.exports.getUserById = function (id) {
     });
   });
 };
+
+module.exports.User = user;
