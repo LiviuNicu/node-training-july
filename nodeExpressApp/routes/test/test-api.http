@@ -65,3 +65,24 @@ DELETE http://localhost:3000/api/employee/delete/60f44082e3998d1008224d01
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxpdml1QGVtYWlsLmNvbSIsIl9pZCI6IjYwZWMyMmUzMDg2MTYxNzEwYzdjMjVjMyIsImlhdCI6MTYyNjYxOTg0MCwiZXhwIjoxNjI2NzA2MjQwfQ.EiNl4jw4LJkUqelPM3MeZonIsqLwLyd1jGQXPYaun5g
 
+###
+POST http://localhost:3000/api/inventory/add
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxpdml1QGVtYWlsLmNvbSIsIl9pZCI6IjYwZWMyMmUzMDg2MTYxNzEwYzdjMjVjMyIsImlhdCI6MTYyNjY3ODI0OSwiZXhwIjoxNjI2NzY0NjQ5fQ.rnmVuFYYMzzQqWjT80Tpt7yfFt2wHZ1NqGgsorqECbo
+
+{"name":"HP Laptop","invetoryCode":"3132123","category":"Laptop","quantity":2}
+
+###
+GET http://localhost:3000/api/inventory/all?page=0&size=10
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxpdml1QGVtYWlsLmNvbSIsIl9pZCI6IjYwZWMyMmUzMDg2MTYxNzEwYzdjMjVjMyIsImlhdCI6MTYyNjY3ODI0OSwiZXhwIjoxNjI2NzY0NjQ5fQ.rnmVuFYYMzzQqWjT80Tpt7yfFt2wHZ1NqGgsorqECbo
+###
+POST http://localhost:3000/api/inventory/addEmployee
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxpdml1QGVtYWlsLmNvbSIsIl9pZCI6IjYwZWMyMmUzMDg2MTYxNzEwYzdjMjVjMyIsImlhdCI6MTYyNjYxOTg0MCwiZXhwIjoxNjI2NzA2MjQwfQ.EiNl4jw4LJkUqelPM3MeZonIsqLwLyd1jGQXPYaun5g
+
+
+{
+    "inventoryId":"60f52400f648b953a4c81f09",
+    "employeeId":"60f33c8018f75d39301b3a1d"
+}

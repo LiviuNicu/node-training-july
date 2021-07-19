@@ -3,6 +3,7 @@ const router = express.Router();
 
 const authController = require("../controllers/auth.controller");
 const employeeController = require("../controllers/employee.controller");
+const invetoryController = require("../controllers/invetory.controller");
 const JWT = require("../middlewares/jwt");
 
 router.post("/auth/register", authController.registerAPI);
@@ -30,5 +31,21 @@ router.post(
   "/employee/update/:id",
   JWT.checkToken,
   employeeController.updateEmployeesAPI
+);
+
+router.post(
+  "/inventory/add",
+  JWT.checkToken,
+  invetoryController.addInventoryAPI
+);
+router.get(
+  "/inventory/all",
+  JWT.checkToken,
+  invetoryController.getAllInvetoriesAPI
+);
+router.post(
+  "/inventory/addEmployee",
+  JWT.checkToken,
+  invetoryController.addEmployeeToInventoryAPI
 );
 module.exports = router;
