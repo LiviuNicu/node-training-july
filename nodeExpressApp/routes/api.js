@@ -4,6 +4,7 @@ const router = express.Router();
 const authController = require("../controllers/auth.controller");
 const employeeController = require("../controllers/employee.controller");
 const invetoryController = require("../controllers/invetory.controller");
+const xlsxController = require("../controllers/xlsx.controller");
 const JWT = require("../middlewares/jwt");
 
 router.post("/auth/register", authController.registerAPI);
@@ -47,5 +48,11 @@ router.post(
   "/inventory/addEmployee",
   JWT.checkToken,
   invetoryController.addEmployeeToInventoryAPI
+);
+
+router.get(
+  "/inventory/readXlsx",
+  JWT.checkToken,
+  xlsxController.readExcelFromFileSystemAPI
 );
 module.exports = router;

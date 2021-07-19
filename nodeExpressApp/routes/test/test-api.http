@@ -86,3 +86,8 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxpdml1QGVtYWls
     "inventoryId":"60f52400f648b953a4c81f09",
     "employeeId":"60f33c8018f75d39301b3a1d"
 }
+
+###
+GET http://localhost:3000/api/inventory/readXlsx
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxpdml1QGVtYWlsLmNvbSIsIl9pZCI6IjYwZWMyMmUzMDg2MTYxNzEwYzdjMjVjMyIsImlhdCI6MTYyNjY3ODI0OSwiZXhwIjoxNjI2NzY0NjQ5fQ.rnmVuFYYMzzQqWjT80Tpt7yfFt2wHZ1NqGgsorqECbo
