@@ -26,3 +26,42 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxpdml1QGVtYWls
 GET http://localhost:3000/api/user/60ec061a7feaf73950178d34
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxpdml1QGVtYWlsLmNvbSIsIl9pZCI6IjYwZWMyMmUzMDg2MTYxNzEwYzdjMjVjMyIsImlhdCI6MTYyNjA5MTAwNSwiZXhwIjoxNjI2MTc3NDA1fQ.yTRsEJv9XEUb0gueBXmfb4qRW9sMwBmvUhzUNK80h3U
+
+###
+GET http://localhost:3000/api/employee/all
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxpdml1QGVtYWlsLmNvbSIsIl9pZCI6IjYwZWMyMmUzMDg2MTYxNzEwYzdjMjVjMyIsImlhdCI6MTYyNjYxOTg0MCwiZXhwIjoxNjI2NzA2MjQwfQ.EiNl4jw4LJkUqelPM3MeZonIsqLwLyd1jGQXPYaun5g
+
+
+###
+POST http://localhost:3000/api/employee/add
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxpdml1QGVtYWlsLmNvbSIsIl9pZCI6IjYwZWMyMmUzMDg2MTYxNzEwYzdjMjVjMyIsImlhdCI6MTYyNjYxOTg0MCwiZXhwIjoxNjI2NzA2MjQwfQ.EiNl4jw4LJkUqelPM3MeZonIsqLwLyd1jGQXPYaun5g
+
+
+{
+    "email":"liviu@email.com",
+    "name":"Test Liviu"
+}
+
+###
+GET http://localhost:3000/api/employee/getById/60f44082e3998d1008224d01
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxpdml1QGVtYWlsLmNvbSIsIl9pZCI6IjYwZWMyMmUzMDg2MTYxNzEwYzdjMjVjMyIsImlhdCI6MTYyNjYxOTg0MCwiZXhwIjoxNjI2NzA2MjQwfQ.EiNl4jw4LJkUqelPM3MeZonIsqLwLyd1jGQXPYaun5g
+
+###
+POST http://localhost:3000/api/employee/update/60f44082e3998d1008224d01
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxpdml1QGVtYWlsLmNvbSIsIl9pZCI6IjYwZWMyMmUzMDg2MTYxNzEwYzdjMjVjMyIsImlhdCI6MTYyNjYxOTg0MCwiZXhwIjoxNjI2NzA2MjQwfQ.EiNl4jw4LJkUqelPM3MeZonIsqLwLyd1jGQXPYaun5g
+
+
+{
+    "email":"liviu@email.com",
+    "name":"Test Liviu updated"
+}
+
+###
+DELETE http://localhost:3000/api/employee/delete/60f44082e3998d1008224d01
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxpdml1QGVtYWlsLmNvbSIsIl9pZCI6IjYwZWMyMmUzMDg2MTYxNzEwYzdjMjVjMyIsImlhdCI6MTYyNjYxOTg0MCwiZXhwIjoxNjI2NzA2MjQwfQ.EiNl4jw4LJkUqelPM3MeZonIsqLwLyd1jGQXPYaun5g
+
