@@ -5,6 +5,23 @@ module.exports.readExcelFromFileSystemAPI = function (req, res) {
   parseXlsx("public/xt.xlsx", res);
 };
 
+module.exports.importFromXlsx = function (req, res) {
+  if (!req.files || Object.keys(req.files).length === 0) {
+    res.status(400).json({ msg: "No files added" });
+  }
+
+  let sampleFile = req.files.xlsFile;
+  const fileName = new Date().getTime() + ".xlsx";
+
+  sampleFile.mv("public/" + fileName, function (err) {
+    if (err) {
+      res.status(500).json({ err });
+    } else {
+      parseXlsx("public/" + fileName, res);
+    }
+  });
+};
+
 const parseXlsx = async function (path, res) {
   const schema = {
     InventoryCode: { prop: "invetoryCode", type: String },
